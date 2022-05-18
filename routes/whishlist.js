@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Wishes = require("../models/Wishes");
+const Wishes = require("../models/wishes");
 const Product = require("../models/product");
 
 const multer = require('multer');
