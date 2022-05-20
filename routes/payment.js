@@ -13,9 +13,10 @@ const bodyParser = require('body-parser');
         card : req.body.num_cart,
         cvv : req.body.cvv,
     });
-    Visa.save().then(
+    order.save().then(
         (result) => {
             if (result) {
+                console.log('messaaageeeeeeeeeeeeeeeeeeeeee')
                 res.status(200).json({
                     message: "Order added with succes ",
                     product: result
