@@ -12,6 +12,7 @@ const bodyParser = require('body-parser');
     Visa.findOne({ card : req.body.num_cart, cvv : req.body.cvv}).then(
         (result) => {
             if (result) {
+                console.log(result,'res');
                 res.status(200).json({
                     check: 'true'
                 })
