@@ -37,8 +37,6 @@ router.post('/forgot-password', async (req, res) => {
             auth: {
                 user:   "roboshop71@gmail.com",
                 pass:   "egsvgyxpxihericg"
-                // user: process.env.EMAIL,
-                // pass: process.env.PASSWORD,
             },
             tls: {
                 // do not fail on invalid certs
