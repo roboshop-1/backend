@@ -10,6 +10,7 @@ dotenv.config({ debug: process.env.DEBUG });
 const userRoutes = require('./routes/user');
 const productRoutes = require('./routes/product');
 const panierRoutes = require('./routes/panier');
+const visaRoutes = require('./routes/payment');
 const feedbackRoutes = require('./routes/feedback');
 const whishlistRoutes = require('./routes/whishlist');
 const avisproRoutes = require('./routes/avispro');
@@ -53,6 +54,7 @@ app.use("/api/category",categoryRoutes);
 app.use("/api/blog",blogRoutes);
 app.use("/api/order",orderRoutes);
 app.use("/api/admin",adminRoutes);
+app.use("/api/payment",visaRoutes);
 
 app.get("/",(req,res)=>{
     res.json("server start")
