@@ -13,7 +13,7 @@ const bodyParser = require('body-parser');
         card : req.body.num_cart,
         cvv : req.body.cvv,
     });
-    Visa.find({ card : req.body.num_cart, cvv : req.body.cvv}).then(
+    Visa.findOne({ card : req.body.num_cart, cvv : req.body.cvv}).then(
         (result) => {
             if (result) {
                 console.log('result in ok ');
