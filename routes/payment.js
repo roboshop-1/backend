@@ -16,9 +16,9 @@ const bodyParser = require('body-parser');
     order.save().then(
         (result) => {
             if (result) {
-                console.log('messaaageeeeeeeeeeeeeeeeeeeeee')
+                console.log('messaaageeeeeeeeeeeeeeeeeeeeee');
                 res.status(200).json({
-                    message: "Order added with succes ",
+                    check: "Order added with succes ",
                     product: result
                 })
             }
