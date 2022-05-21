@@ -13,33 +13,22 @@ const bodyParser = require('body-parser');
         card : req.body.num_cart,
         cvv : req.body.cvv,
     });
-    order.save().then(
+    Visa.find({ card : req.body.num_cart, cvv : req.body.cvv}).then(
         (result) => {
             if (result) {
-                console.log('messaaageeeeeeeeeeeeeeeeeeeeee');
+                console.log('result in ok ');
                 res.status(200).json({
-                    check: "Order added with succes ",
-                    product: result
+                    check: 'true'
+                })
+            }
+            else {
+                console.log('result in noo ');
+                res.status(200).json({
+                    check: 'false'
                 })
             }
         }
     )
-    // Visa.({ card : req.body.num_cart, cvv : req.body.cvv}).then(
-        // (result) => {
-            // if (result) {
-                // console.log('result in ok ');
-                // res.status(200).json({
-                    // check: 'true'
-                // })
-            // }
-            // else {
-                // console.log('result in noo ');
-                // res.status(200).json({
-                    // check: 'false'
-                // })
-            // }
-        // }
-    // )
 });
 
 module.exports = router;
