@@ -184,7 +184,7 @@ router.post('/Messages/:id', async (req, res) => {
         }));
         const templatePath = path.resolve('./views', 'message.html');
         const registerTemplate = fs.readFileSync(templatePath, { encoding: 'utf-8' })
-        let url = 'http://localhost:4200'
+        let url = 'https://roboshoptnn.herokuapp.com'
         const render = ejs.render(registerTemplate, { name: req.body.fname, message: req.body.message, link : `${url}` })
        // console.log('render',render);
         

@@ -46,7 +46,7 @@ router.post('/forgot-password', async (req, res) => {
         }));
         const templatePath = path.resolve('./views', 'resetPassword.html');
         const registerTemplate = fs.readFileSync(templatePath, { encoding: 'utf-8' })
-        let url = 'http://localhost:4200'
+        let url = 'https://roboshoptnn.herokuapp.com'
         const render = ejs.render(registerTemplate, { name: company.name, link: `${url}/reset-password/${createdToken.token}` })
         // console.log('render',render);
         //  try{
