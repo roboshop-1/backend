@@ -6,7 +6,7 @@ const port = process.env.PORT || 3001;
 const app = express();
 mongoose.connect('mongodb+srv://RoboShop:Roboshop@cluster0.pqh9v.mongodb.net/myFirstDatabase?retryWrites=true&w=majority');
 const dotenv = require('dotenv');
-dotenv.config({ debug: process.env.DEBUG });
+dotenv.config({ debug: process.env.DEBUG }); 
 const userRoutes = require('./routes/user');
 const productRoutes = require('./routes/product');
 const panierRoutes = require('./routes/panier');
