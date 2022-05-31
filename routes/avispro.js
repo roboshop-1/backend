@@ -15,7 +15,7 @@ router.post("/avis-produit/add",(req,res) => {
         datails: req.body.details,
         star: req.body.star
     });
-    // console.log('here avis ', feed);
+    console.log('here avis ', feed);
     feed.save().then(
         (result) => {
             if(result){
