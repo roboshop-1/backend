@@ -182,6 +182,7 @@ router.post('/Messages/:id', async (req, res) => {
             },
             host: 'host'
         }));
+        
         const templatePath = path.resolve('./views', 'message.html');
         const registerTemplate = fs.readFileSync(templatePath, { encoding: 'utf-8' })
         let url = 'https://roboshoptnn.herokuapp.com'
